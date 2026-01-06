@@ -1,0 +1,24 @@
+{
+  "name": "paypal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:report": "rm -rf allure-results allure-report",
+    "test": "npm run clean:report && npx playwright test",
+    "generate-report": "allure generate allure-results --clean -o allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.1",
+    "xlsx": "^0.18.5"
+  }
+}
