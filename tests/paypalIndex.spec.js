@@ -3,14 +3,14 @@ import XLSX from 'xlsx';
 const fs = require('fs');
 
 const config = JSON.parse(fs.readFileSync('./tests/config.json', 'utf8'));
-console.log('ClientId',config.clientId);
+const clientId=process.env.CLIENTID;
+const clientSecret=process.env.CLIENTSECRET;
 
 test.describe('Access Token Tests', ()=> {
 
 test('Get the Access token', async({ request })=> {
 
 const clientId=config.clientId;
-const clientSecret=config.clientSecret;
    const base64 = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
 
 const responseData=await request.post("https://api-m.sandbox.paypal.com/v1/oauth2/token",{
