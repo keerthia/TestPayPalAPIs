@@ -1,0 +1,46 @@
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment1",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '6C601291MP9717814',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6C601291MP9717814',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=6C601291MP9717814',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6C601291MP9717814',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6C601291MP9717814/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 6633,
+  [Symbol(trigger_async_id_symbol)]: 6611,
+  [Symbol(kResourceStore)]: undefined
+}
+Order ID 6C601291MP9717814

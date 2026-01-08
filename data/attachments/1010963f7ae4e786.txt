@@ -1,0 +1,46 @@
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_01",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '9SM23211UL559011J',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/9SM23211UL559011J',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=9SM23211UL559011J',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/9SM23211UL559011J',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/9SM23211UL559011J/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 2539,
+  [Symbol(trigger_async_id_symbol)]: 2517,
+  [Symbol(kResourceStore)]: undefined
+}
+Order ID 9SM23211UL559011J

@@ -1,0 +1,39 @@
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment3",
+      "amount": {
+        "currency_code": "USD",
+        "value": "-1.00"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: '-1.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f634939fce721',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Order created with status code 422
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 434,
+  [Symbol(trigger_async_id_symbol)]: 412,
+  [Symbol(kResourceStore)]: undefined
+}
