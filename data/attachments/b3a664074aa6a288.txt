@@ -1,0 +1,46 @@
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_03",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '5VT97877TT333722P',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5VT97877TT333722P',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=5VT97877TT333722P',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5VT97877TT333722P',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5VT97877TT333722P/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 12774,
+  [Symbol(trigger_async_id_symbol)]: 12752,
+  [Symbol(kResourceStore)]: undefined
+}
+Order ID 5VT97877TT333722P
