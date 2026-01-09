@@ -3,8 +3,8 @@ import XLSX from 'xlsx';
 const fs = require('fs');
 
 const config = JSON.parse(fs.readFileSync('./tests/config.json', 'utf8'));
-const clientId=process.env.CLIENTID;
-const clientSecret=process.env.CLIENTSECRET;
+const clientId=config.clientId;
+const clientSecret=config.clientSecret;
 
 test.describe('Access Token Tests', ()=> {
 

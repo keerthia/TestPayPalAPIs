@@ -1,0 +1,506 @@
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '6LP32678MP7667319',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6LP32678MP7667319',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=6LP32678MP7667319',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6LP32678MP7667319',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6LP32678MP7667319/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 465,
+  [Symbol(trigger_async_id_symbol)]: 443,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Order ID 6LP32678MP7667319
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_01",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '30M63339XT7854109',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/30M63339XT7854109',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=30M63339XT7854109',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/30M63339XT7854109',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/30M63339XT7854109/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 832,
+  [Symbol(trigger_async_id_symbol)]: 810,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Order ID 30M63339XT7854109
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_02",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '82V31662YG7534407',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/82V31662YG7534407',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=82V31662YG7534407',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/82V31662YG7534407',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/82V31662YG7534407/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 1199,
+  [Symbol(trigger_async_id_symbol)]: 1177,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Order ID 82V31662YG7534407
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment1",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '7D809074H7549410Y',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/7D809074H7549410Y',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=7D809074H7549410Y',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/7D809074H7549410Y',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/7D809074H7549410Y/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 1566,
+  [Symbol(trigger_async_id_symbol)]: 1544,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Order ID 7D809074H7549410Y
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "food",
+      "amount": {
+        "currency_code": "USD",
+        "value": "500.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '5P871750KA0932242',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5P871750KA0932242',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=5P871750KA0932242',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5P871750KA0932242',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5P871750KA0932242/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 1933,
+  [Symbol(trigger_async_id_symbol)]: 1911,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Order ID 5P871750KA0932242
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "tv",
+      "amount": {
+        "currency_code": "USD",
+        "value": "5.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '41988148EK700553F',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/41988148EK700553F',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=41988148EK700553F',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/41988148EK700553F',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/41988148EK700553F/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 2300,
+  [Symbol(trigger_async_id_symbol)]: 2278,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Order ID 41988148EK700553F
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_03",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '5LR02657DY852864D',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5LR02657DY852864D',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=5LR02657DY852864D',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5LR02657DY852864D',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5LR02657DY852864D/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 2667,
+  [Symbol(trigger_async_id_symbol)]: 2645,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Order ID 5LR02657DY852864D
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_04",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '3BW808094G3002303',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3BW808094G3002303',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=3BW808094G3002303',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3BW808094G3002303',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3BW808094G3002303/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 3034,
+  [Symbol(trigger_async_id_symbol)]: 3012,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Order ID 3BW808094G3002303
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment2",
+      "amount": {
+        "currency_code": "USD",
+        "value": "0.00"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment2'/amount/value",
+      value: '0.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f600415054ac2',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Order created with status code 422
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 3401,
+  [Symbol(trigger_async_id_symbol)]: 3379,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment3",
+      "amount": {
+        "currency_code": "USD",
+        "value": "-1.00"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: '-1.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f67881199e934',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Order created with status code 422
+Order created with response  Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 3720,
+  [Symbol(trigger_async_id_symbol)]: 3698,
+  [Symbol(kResourceStore)]: Zone {
+    _asyncLocalStorage: AsyncLocalStorage {
+      kResourceStore: Symbol(kResourceStore),
+      enabled: true
+    },
+    _data: Map(1) { 'stepZone' => [Object] }
+  }
+}

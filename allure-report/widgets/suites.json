@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"a3ef01fd46eb009ef8d86ca6032e5bd8","name":"orderValidation.spec.js","statistic":{"failed":2,"broken":0,"skipped":0,"passed":9,"unknown":0,"total":11}}]}
+{"total":2,"items":[{"uid":"a3ef01fd46eb009ef8d86ca6032e5bd8","name":"orderValidation.spec.js","statistic":{"failed":3,"broken":0,"skipped":0,"passed":9,"unknown":0,"total":12}},{"uid":"c7f08c4edc71428c18408b4e645d8a63","name":"paypalIndex.spec.js","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}

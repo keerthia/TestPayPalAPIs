@@ -1,12 +1,12 @@
 import { test, expect, request } from '@playwright/test';
-import * as dataCreation from "../tests/dataCreation.js";
+import * as dataCreation from "./dataCreation.js";
 import * as allure from "allure-js-commons";
 import XLSX from 'xlsx';
 const fs = require('fs');
 const axios = require("axios");
-const access_token_path=require("../tests/config.json");
+const access_token_path=require("./config.json");
 const ACCESS_TOKEN =access_token_path.access_token;
-// Replace with the order ID you want to check
+// Replace with the order ID to check
 const ORDER_ID = "YOUR_ORDER_ID";
 
 async function validatePayPalOrder(orderId) {
@@ -33,25 +33,22 @@ async function validatePayPalOrder(orderId) {
       throw new Error("Missing payer status");
     }
 
-    // Example: check if order is completed
+    // check if order is completed
     if (data.status === "COMPLETED") {
-      console.log("✅ Payment completed successfully");
+      console.log("Payment completed successfully");
     } else {
-      console.log(`⚠ Payment status: ${data.status}`);
+      console.log(`Payment status: ${data.status}`);
     }
 
-    // Example: check payer account status
+    // check payer account status
     const accountStatus = data.payer.status; // sometimes "UNVERIFIED" or "VERIFIED"
     console.log(`Payer account status: ${accountStatus}`);
 
     if (accountStatus === "UNVERIFIED") {
-      console.log("⚠ Payer account is unverified");
+      console.log("Payer account is unverified");
     } else if (accountStatus === "VERIFIED") {
-      console.log("✅ Payer account is verified");
+      console.log("Payer account is verified");
     }
-
-    // Add more validations as needed
-    // e.g., check amount, currency, payer email, etc.
 
   } catch (error) {
     console.error("Error validating PayPal order:", error.message);
@@ -79,8 +76,10 @@ const createOrderResponse=await request.post("https://api-m.sandbox.paypal.com/v
 
     const finalRequests =  dataCreation.createDynamicRequestsFromJson(orders);
 
+    test('Create order', async({ request })=> {
   for (const [index, data] of finalRequests.entries()) {
-    test(`Create a order successfully for test data ${index + 1}`, async({ request })=> {
+
+        await allure.step(`Creating order for ID: ${data.id}`, async () => {
   const orderString = JSON.stringify(data, null, 2);
   console.log("Request body",orderString);
   let token=access_token_path.access_token;
@@ -96,7 +95,7 @@ expect.soft(
       if(responseData.status()===200 || responseData.status() === 201) {
         if (orderResponse.id !=="") {
       console.log('Order created with status code', responseData.status());
-      console.log('Order created with response ', responseData.json());
+      //console.log('Order created with response ', responseData.json());
           await allure.attachment("Response", responseData.json(), "application/json");
 
       //console.log("Reference_ID", orderString.purchase_units[0].reference_id);
@@ -109,9 +108,10 @@ expect.soft(
 
         //console.log("Reference_ID", orderString.reference_id);
   }
-
   });
 }
+  });
+
 
   test('Order creation - Validate the orderID', async()=>
   {
