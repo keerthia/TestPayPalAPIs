@@ -1,0 +1,26 @@
+{
+  "id": "3M562096AY4340918",
+  "status": "CREATED",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/3M562096AY4340918",
+      "rel": "self",
+      "method": "GET"
+    },
+    {
+      "href": "https://www.sandbox.paypal.com/checkoutnow?token=3M562096AY4340918",
+      "rel": "approve",
+      "method": "GET"
+    },
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/3M562096AY4340918",
+      "rel": "update",
+      "method": "PATCH"
+    },
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/3M562096AY4340918/capture",
+      "rel": "capture",
+      "method": "POST"
+    }
+  ]
+}

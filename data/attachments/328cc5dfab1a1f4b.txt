@@ -1,0 +1,525 @@
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "amount": {
+        "currency_code": "USD",
+        "value": "-1.00"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='default'/amount/value",
+      value: '-1.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f955218840f3b',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Order created with status code 422
+Order created with response  {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='default'/amount/value",
+      value: '-1.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f955218840f3b',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment3",
+      "amount": {
+        "currency_code": "USD",
+        "value": "NaN"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'INVALID_REQUEST',
+  message: 'Request is not well-formed, syntactically incorrect, or violates schema.',
+  debug_id: 'f95521853e054',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: 'NaN',
+      location: 'body',
+      issue: 'INVALID_PARAMETER_SYNTAX',
+      description: 'The value of a field does not conform to the expected format.'
+    }
+  ],
+  links: [
+    {
+      href: 'https://developer.paypal.com/docs/api/orders/v2/#error-INVALID_PARAMETER_SYNTAX',
+      rel: 'information_link',
+      encType: 'application/json'
+    }
+  ]
+}
+Order created with status code 400
+Order created with response  {
+  name: 'INVALID_REQUEST',
+  message: 'Request is not well-formed, syntactically incorrect, or violates schema.',
+  debug_id: 'f95521853e054',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: 'NaN',
+      location: 'body',
+      issue: 'INVALID_PARAMETER_SYNTAX',
+      description: 'The value of a field does not conform to the expected format.'
+    }
+  ],
+  links: [
+    {
+      href: 'https://developer.paypal.com/docs/api/orders/v2/#error-INVALID_PARAMETER_SYNTAX',
+      rel: 'information_link',
+      encType: 'application/json'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '49V061474T918831J',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/49V061474T918831J',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=49V061474T918831J',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/49V061474T918831J',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/49V061474T918831J/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_01",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '3M562096AY4340918',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3M562096AY4340918',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=3M562096AY4340918',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3M562096AY4340918',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3M562096AY4340918/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_02",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '00L64579CH120423N',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/00L64579CH120423N',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=00L64579CH120423N',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/00L64579CH120423N',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/00L64579CH120423N/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment1",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '6N975434CV7906310',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6N975434CV7906310',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=6N975434CV7906310',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6N975434CV7906310',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6N975434CV7906310/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "food",
+      "amount": {
+        "currency_code": "USD",
+        "value": "500.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '2KB0592538559204G',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/2KB0592538559204G',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=2KB0592538559204G',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/2KB0592538559204G',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/2KB0592538559204G/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "tv",
+      "amount": {
+        "currency_code": "USD",
+        "value": "5.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '1AP636708A7179508',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/1AP636708A7179508',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=1AP636708A7179508',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/1AP636708A7179508',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/1AP636708A7179508/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_03",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '6GY04338HU642973R',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6GY04338HU642973R',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=6GY04338HU642973R',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6GY04338HU642973R',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6GY04338HU642973R/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_04",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '0WA99724R0081774U',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0WA99724R0081774U',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=0WA99724R0081774U',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0WA99724R0081774U',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0WA99724R0081774U/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Order created with status code 201
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment2",
+      "amount": {
+        "currency_code": "USD",
+        "value": "0.00"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment2'/amount/value",
+      value: '0.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f7371426dd20c',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Order created with status code 422
+Order created with response  {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment2'/amount/value",
+      value: '0.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f7371426dd20c',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment3",
+      "amount": {
+        "currency_code": "USD",
+        "value": "-1.00"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: '-1.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f21611086783c',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Order created with status code 422
+Order created with response  {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: '-1.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f21611086783c',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
