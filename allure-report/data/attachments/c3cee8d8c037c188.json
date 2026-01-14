@@ -1,0 +1,20 @@
+{
+  "name": "UNPROCESSABLE_ENTITY",
+  "details": [
+    {
+      "field": "/purchase_units/@reference_id=='payment3'/amount/value",
+      "value": "-1.00",
+      "issue": "CANNOT_BE_ZERO_OR_NEGATIVE",
+      "description": "Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported."
+    }
+  ],
+  "message": "The requested action could not be performed, semantically incorrect, or failed business validation.",
+  "debug_id": "f21611086783c",
+  "links": [
+    {
+      "href": "https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE",
+      "rel": "information_link",
+      "method": "GET"
+    }
+  ]
+}

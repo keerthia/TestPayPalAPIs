@@ -1,0 +1,26 @@
+{
+  "id": "00L64579CH120423N",
+  "status": "CREATED",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/00L64579CH120423N",
+      "rel": "self",
+      "method": "GET"
+    },
+    {
+      "href": "https://www.sandbox.paypal.com/checkoutnow?token=00L64579CH120423N",
+      "rel": "approve",
+      "method": "GET"
+    },
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/00L64579CH120423N",
+      "rel": "update",
+      "method": "PATCH"
+    },
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/00L64579CH120423N/capture",
+      "rel": "capture",
+      "method": "POST"
+    }
+  ]
+}

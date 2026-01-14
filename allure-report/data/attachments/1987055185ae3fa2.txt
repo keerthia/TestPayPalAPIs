@@ -1,3 +1,0 @@
-Access token received with status code 200
-Valid Access Token retrived A21AAJj2lxchRbDEq5oL87QKcNoqXLSBRtSy7r2se5GYWWi-kBYd9Kjj7w2JDwj5PGLZj3HGwx9MJ7PEligssnM_d7ct3AYaw
-config.access_token A21AALGnX7CozQvOM_nUgLc0yS7c1YdiMYx4ECtwCpzhzmylSM2DH9oV5l0k6ghpofVlg9SkqnCprppkE8N-6JoTj2eANTacw
