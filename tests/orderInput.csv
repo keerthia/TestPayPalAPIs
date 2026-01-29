@@ -1,5 +1,7 @@
 intent,purchase_units,reference_id,amount,currency_code,value
-CAPTURE,,,,USD,-1.00
+CAPTURE,,subscription_03,,USD,50.00
+CAPTURE,,subscription_04,,USD,50.00
+CAPTURE,,,,USD,10.00
 CAPTURE,,payment3,,USD,
 CAPTURE,,subscription,,USD,50.00
 CAPTURE,,subscription_01,,USD,100.00
@@ -7,9 +9,5 @@ CAPTURE,,subscription_02,,USD,100.00
 CAPTURE,,payment1,,USD,100.00
 CAPTURE,,food,,USD,500.00
 CAPTURE,,tv,,USD,5.00
-CAPTURE,,subscription_03,,USD,50.00
-CAPTURE,,subscription_04,,USD,50.00
 CAPTURE,,payment2,,USD,0.00
 CAPTURE,,payment3,,USD,-1.00
-
-

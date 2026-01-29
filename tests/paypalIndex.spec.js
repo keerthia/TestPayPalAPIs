@@ -24,9 +24,9 @@ const responseData=await request.post("https://api-m.sandbox.paypal.com/v1/oauth
       expect.soft(responseData.status()).toBe(200);//Using Soft as the tests has to run for the other requests. And this helps in reporting
      if(responseData.status()===200){
       console.log('Access token received with status code', responseData.status());
-      console.log('Valid Access Token retrived', result.access_token);
+      //console.log('Valid Access Token retrived', result.access_token);
       let access_token=result.access_token;
-      console.log('config.access_token',config.access_token);
+      //console.log('config.access_token',config.access_token);
            config.access_token = access_token;
           // config.expires_at = now + token.expires_in;
            fs.writeFileSync('./tests/config.json', JSON.stringify(config,null,2));

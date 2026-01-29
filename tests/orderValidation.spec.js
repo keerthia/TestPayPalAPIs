@@ -7,6 +7,10 @@ const axios = require("axios");
 const access_token_path=require("./config.json");
 const ACCESS_TOKEN =access_token_path.access_token;
 
+const apiResponsesMap = new Map();
+const apiResponsesStatusMap = new Map();
+let finalRequests;
+
 
 async function validatePayPalOrder(orderId) {
   try {
@@ -65,56 +69,59 @@ const createOrderResponse=await request.post("https://api-m.sandbox.paypal.com/v
   return createOrderResponse;
   }
 
+  test.beforeAll(async ({ request }) => {
+    let orderResponse;
+      const workbook = XLSX.readFile('./tests/orderInput.csv');
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const orders = XLSX.utils.sheet_to_json(sheet);
 
+
+      finalRequests =  dataCreation.createDynamicRequestsFromJson(orders);
+      console.log("finalRequests.length()", finalRequests.length);
+            for (const [index, data] of finalRequests.entries()) {
+                const orderString = JSON.stringify(data, null, 2);
+                console.log("Request body",orderString);
+                let token=access_token_path.access_token;
+                const responseData=await sendRequestOrder(request,token,orderString);
+                orderResponse=await responseData.json();
+                console.log("responseData",await responseData.json());
+                await apiResponsesMap.set(index,orderResponse);
+                await apiResponsesStatusMap.set(index,responseData.status());
+
+            }
+});
 
 //Order Creation
 test.describe('Order flow', () => {
 
-    let orderResponse;
-    const workbook = XLSX.readFile('./tests/orderInput.csv');
-    const sheet = workbook.Sheets[workbook.SheetNames[0]];
-    const orders = XLSX.utils.sheet_to_json(sheet);
 
-    const finalRequests =  dataCreation.createDynamicRequestsFromJson(orders);
-    console.log("finalRequests.length()", finalRequests.length);
-    const orderIds = new Array([finalRequests.length]);
-    const orderResponseStatus = new Array([finalRequests.length]);
-    const apiResponsesMap = new Map();
-    const apiResponsesStatusMap = new Map();
-
-  test('Create order successfully and Validate the response', async({ request })=> {
-    for (const [index, data] of finalRequests.entries()) {
-    await allure.step(`Creating order for ID: ${index}`, async () => {
-    const orderString = JSON.stringify(data, null, 2);
-    console.log("Request body",orderString);
-    let token=access_token_path.access_token;
-    const responseData=await sendRequestOrder(request,token,orderString);
-    orderResponse=await responseData.json();
-    console.log("responseData",await responseData.json());
-    apiResponsesStatusMap.set(index,responseData.status());
+  test('Order - Validate the response', async({ request })=> {
+  for (const [index, data] of finalRequests.entries()) {
+  let status=apiResponsesStatusMap.get(index);
+  let responseOrder=apiResponsesMap.get(index);
+    await allure.step(`Order - Validate the response for data ${index}`, async () => {
     expect.soft(
-        responseData.status() === 200 || responseData.status() === 201 || responseData.status() === 422,
+        status === 200 || status === 201 || status === 422,
         'Status should be valid 200 or 201 or 422').toBeTruthy();
 
-      if(responseData.status()===200 || responseData.status() === 201) {
-        if (orderResponse.id !=="") {
-            console.log('Order created with status code', responseData.status());
-            await allure.attachment("Response", JSON.stringify(orderResponse, null, 2), "application/json");
+      if(status===200 || status === 201) {
+      //Run only when id EXISTS and is NOT empty
+        if (responseOrder?.id) {
+            console.log('Order created with status code', status);
+            await allure.attachment("Response - Order Id exists", JSON.stringify(responseOrder, null, 2), "application/json");
             //orderIds.push(orderResponse.id);
             //responseJson=await responseData.json();
-            apiResponsesMap.set(index,orderResponse);
         }
       }
-  else if(responseData.status()===422){
-        console.log('Order created with status code', responseData.status());
-        console.log('Order created with response ', orderResponse);
+  else if(status===422){
+        console.log('Order created with status code', status);
         //responseJson=await responseData.json();
-        await allure.attachment("Response", JSON.stringify(orderResponse, null, 2), "application/json");
-        apiResponsesMap.set(index,orderResponse);
+        await allure.attachment("Response - Order Id doesnt exist - Invalid Input", JSON.stringify(responseOrder, null, 2), "application/json");
   }
   else{
-   console.log('Order created with status code', responseData.status());
-   console.log('Order created with response ', orderResponse);
+   console.log('Order created with status code', status);
+   console.log('Order created with response ', responseOrder);
+   await allure.attachment("Response - Invalid Input", JSON.stringify(responseOrder, null, 2), "application/json");
   }
   });
 }
@@ -124,19 +131,25 @@ test.describe('Order flow', () => {
   test('Order creation - Validate the orderID', async()=>
   {
     for (const [key, order] of apiResponsesMap.entries()) {
-        const order=await apiResponsesMap.get(key);
-        //console.log("Order from  Validate the orderID",order);
-        await allure.step(`Validate order ID:${key} ${order.id}`, async () => {
+        //console.log("In Validate the orderID",order.id);
+       const order=await apiResponsesMap.get(key);
+        console.log("Order from  Validate the orderID",order);
         const responseStatus=apiResponsesStatusMap.get(key);
             if(responseStatus===200 || responseStatus === 201) {
-              if (order.id !=="" || !order.id) {
-                    expect.soft(order.id, 'Order ID valid').toBeTruthy();
+              if (order?.id) {
+                    await allure.step(`Validate order ID:${key} ${order.id}`, async () => {
+                    expect.soft(order.id.length, 'Order ID Valid')
+                      .toBe(17);
+                      //expect.soft(order.id, 'Order ID valid').toBeTruthy();
                     //await allure.attachment("Order ID", JSON.stringify(order.id, null, 2), "application/json");
-              }
-            console.log("OrderID Not empty  ",order.id);
-
+              });
             }
-        });
+
+        }
+        else{
+         await allure.step(`Order ID doesnt exist for input data ${key}     ${order.message}`, async () => {
+                  });
+        }
     }
   });
 
@@ -144,28 +157,65 @@ test.describe('Order flow', () => {
  {
 
     for (const [key, order] of apiResponsesMap.entries()) {
-       await allure.step(`Validate order ID:${key} ${order.id}`, async () => {
        const responseStatus=apiResponsesStatusMap.get(key);
     if(responseStatus===200 || responseStatus === 201) {
-    console.log(`ID in Map: ${key} | Json Response: `);
-    const responseValue=apiResponsesMap.get(key);
+    if(order?.id)
+    {
+    await allure.step(`ORDER ID ${order.id}`, async () => {
+    console.log(`ID in Map: ${key} | Json Response: `,order);
     //console.log(responseValue);
-    responseValue.links.forEach(link => {
+    order.links.forEach(link => {
         expect.soft(link.href,
-          `Link href validation for map key ${key}`
-        ).toContain(responseValue.id);
+          `Response Link contains order Id`
+        ).toContain(order.id);
         //await allure.attachment("", JSON.stringify(order.id, null, 2), "application/json");
       });
-      }
       });
       }
+      }
+      else
+      {
+           await allure.step(`Order ID doesnt exist for input data ${key}   ${order.message}`, async () => {
+                           });
+          }
+          }
+
+
+
     });
+
+  test('Order Approval - All Valid Ids should get approved', async({ request })=>{
+    for (const [key, order] of apiResponsesMap.entries()) {
+        if(order?.id){
+            for(const link of order.links){
+                 if(link.rel==="approve")
+                 {
+                    await allure.step(`Approval successful for the ${order.id}`,async () => {
+                    console.log("Approving URL:", link.href);
+                    const captureResponse = await request.post(link.href);//shows the performance of the page loaded
+                    console.log("captureResponse.status()",captureResponse.status());
+                    expect.soft(captureResponse.status()).toBe(200);        //window.location.href.open();--Didnt work as the window object is not defined
+                 });
+                 }
+            }
+        }
+        else
+        {
+            await allure.step(`Invalid request`, async () => {
+                                                                          });
+        }
+    }
+    });
+    });
+
+
+
 
 
     //expect(apiResponsesMap.get(key).links.href).toContain(orderResponse.id);
 
     //console.log(`Link ${index + 1} (${link.rel}) validated for ID: ${orderId}`);
-  });
+
 
 
 

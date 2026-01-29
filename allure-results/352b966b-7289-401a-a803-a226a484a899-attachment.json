@@ -1,0 +1,26 @@
+{
+  "id": "8AG232100G105002C",
+  "status": "CREATED",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/8AG232100G105002C",
+      "rel": "self",
+      "method": "GET"
+    },
+    {
+      "href": "https://www.sandbox.paypal.com/checkoutnow?token=8AG232100G105002C",
+      "rel": "approve",
+      "method": "GET"
+    },
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/8AG232100G105002C",
+      "rel": "update",
+      "method": "PATCH"
+    },
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/8AG232100G105002C/capture",
+      "rel": "capture",
+      "method": "POST"
+    }
+  ]
+}
