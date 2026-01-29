@@ -1,0 +1,520 @@
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'subscription_03', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'subscription_04', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: undefined, amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'payment3', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'subscription', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'subscription_01', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'subscription_02', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'payment1', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'food', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'tv', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'payment2', amount: [Object] } ]
+}
+paymentPayload {
+  intent: 'CAPTURE',
+  purchase_units: [ { reference_id: 'payment3', amount: [Object] } ]
+}
+finalRequests.length() 12
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_03",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '0CB166189R341732T',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0CB166189R341732T',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=0CB166189R341732T',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0CB166189R341732T',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0CB166189R341732T/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_04",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '2KN17986TV696913X',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/2KN17986TV696913X',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=2KN17986TV696913X',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/2KN17986TV696913X',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/2KN17986TV696913X/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "amount": {
+        "currency_code": "USD",
+        "value": "10.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '5TL142167U147110F',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5TL142167U147110F',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=5TL142167U147110F',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5TL142167U147110F',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/5TL142167U147110F/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment3",
+      "amount": {
+        "currency_code": "USD",
+        "value": "NaN"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'INVALID_REQUEST',
+  message: 'Request is not well-formed, syntactically incorrect, or violates schema.',
+  debug_id: 'f966721510b2e',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: 'NaN',
+      location: 'body',
+      issue: 'INVALID_PARAMETER_SYNTAX',
+      description: 'The value of a field does not conform to the expected format.'
+    }
+  ],
+  links: [
+    {
+      href: 'https://developer.paypal.com/docs/api/orders/v2/#error-INVALID_PARAMETER_SYNTAX',
+      rel: 'information_link',
+      encType: 'application/json'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription",
+      "amount": {
+        "currency_code": "USD",
+        "value": "50.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '11X84219950255236',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/11X84219950255236',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=11X84219950255236',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/11X84219950255236',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/11X84219950255236/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_01",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '01F77354L37014914',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/01F77354L37014914',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=01F77354L37014914',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/01F77354L37014914',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/01F77354L37014914/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "subscription_02",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '71T32541MV6871916',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/71T32541MV6871916',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=71T32541MV6871916',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/71T32541MV6871916',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/71T32541MV6871916/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment1",
+      "amount": {
+        "currency_code": "USD",
+        "value": "100.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '34C52721M9410221C',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/34C52721M9410221C',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=34C52721M9410221C',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/34C52721M9410221C',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/34C52721M9410221C/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "food",
+      "amount": {
+        "currency_code": "USD",
+        "value": "500.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '8B078531SY895302E',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/8B078531SY895302E',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=8B078531SY895302E',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/8B078531SY895302E',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/8B078531SY895302E/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "tv",
+      "amount": {
+        "currency_code": "USD",
+        "value": "5.00"
+      }
+    }
+  ]
+}
+responseData {
+  id: '60160148U4755104W',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/60160148U4755104W',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=60160148U4755104W',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/60160148U4755104W',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/60160148U4755104W/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment2",
+      "amount": {
+        "currency_code": "USD",
+        "value": "0.00"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment2'/amount/value",
+      value: '0.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f786607646d75',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Request body {
+  "intent": "CAPTURE",
+  "purchase_units": [
+    {
+      "reference_id": "payment3",
+      "amount": {
+        "currency_code": "USD",
+        "value": "-1.00"
+      }
+    }
+  ]
+}
+responseData {
+  name: 'UNPROCESSABLE_ENTITY',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: '-1.00',
+      issue: 'CANNOT_BE_ZERO_OR_NEGATIVE',
+      description: 'Must be greater than zero. If the currency supports decimals, only two decimal place precision is supported.'
+    }
+  ],
+  message: 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+  debug_id: 'f786607caf861',
+  links: [
+    {
+      href: 'https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE',
+      rel: 'information_link',
+      method: 'GET'
+    }
+  ]
+}
+Order created with status code 201
+Order created with status code 201
+Order created with status code 201
+Order created with status code 400
+Order created with response  {
+  name: 'INVALID_REQUEST',
+  message: 'Request is not well-formed, syntactically incorrect, or violates schema.',
+  debug_id: 'f966721510b2e',
+  details: [
+    {
+      field: "/purchase_units/@reference_id=='payment3'/amount/value",
+      value: 'NaN',
+      location: 'body',
+      issue: 'INVALID_PARAMETER_SYNTAX',
+      description: 'The value of a field does not conform to the expected format.'
+    }
+  ],
+  links: [
+    {
+      href: 'https://developer.paypal.com/docs/api/orders/v2/#error-INVALID_PARAMETER_SYNTAX',
+      rel: 'information_link',
+      encType: 'application/json'
+    }
+  ]
+}
+Order created with status code 201
+Order created with status code 201
+Order created with status code 201
+Order created with status code 201
+Order created with status code 201
+Order created with status code 201
+Order created with status code 422
+Order created with status code 422

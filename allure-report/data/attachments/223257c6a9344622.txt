@@ -1,0 +1,18 @@
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=0HG43334KY127230E
+captureResponse.status() 200
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=3TD78654LK531462S
+captureResponse.status() 200
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=23372265LV8899520
+captureResponse.status() 200
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=62M108868E3654715
+captureResponse.status() 200
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=0GU74538UW666593U
+captureResponse.status() 200
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=1K620859D9159834F
+captureResponse.status() 200
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=3D6249149E615672R
+captureResponse.status() 200
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=6E145572VP0666803
+captureResponse.status() 200
+Approving URL: https://www.sandbox.paypal.com/checkoutnow?token=9AG06169CS5633203
+captureResponse.status() 200

@@ -70,6 +70,7 @@ const createOrderResponse=await request.post("https://api-m.sandbox.paypal.com/v
   }
 
   test.beforeAll(async ({ request }) => {
+     await allure.severity("critical");
     let orderResponse;
       const workbook = XLSX.readFile('./tests/orderInput.csv');
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
@@ -96,6 +97,7 @@ test.describe('Order flow', () => {
 
 
   test('Order - Validate the response', async({ request })=> {
+       await allure.severity("critical");
   for (const [index, data] of finalRequests.entries()) {
   let status=apiResponsesStatusMap.get(index);
   let responseOrder=apiResponsesMap.get(index);
@@ -155,6 +157,7 @@ test.describe('Order flow', () => {
 
  test('Validate that every link contains the corresponding ID', async()=>
  {
+       await allure.severity("minor");
 
     for (const [key, order] of apiResponsesMap.entries()) {
        const responseStatus=apiResponsesStatusMap.get(key);
@@ -185,6 +188,8 @@ test.describe('Order flow', () => {
     });
 
   test('Order Approval - All Valid Ids should get approved', async({ request })=>{
+         await allure.severity("critical");
+
     for (const [key, order] of apiResponsesMap.entries()) {
         if(order?.id){
             for(const link of order.links){

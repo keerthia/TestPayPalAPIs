@@ -1,4 +1,5 @@
 import { test, expect, request } from '@playwright/test';
+import * as allure from "allure-js-commons";
 import XLSX from 'xlsx';
 const fs = require('fs');
 
@@ -9,7 +10,7 @@ const clientSecret=config.clientSecret;
 test.describe('Access Token Tests', ()=> {
 
 test('Get the Access token', async({ request })=> {
-
+ await allure.severity("blocker");
 const clientId=config.clientId;
    const base64 = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
 
