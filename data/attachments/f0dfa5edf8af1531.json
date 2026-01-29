@@ -1,0 +1,26 @@
+{
+  "id": "5TL142167U147110F",
+  "status": "CREATED",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/5TL142167U147110F",
+      "rel": "self",
+      "method": "GET"
+    },
+    {
+      "href": "https://www.sandbox.paypal.com/checkoutnow?token=5TL142167U147110F",
+      "rel": "approve",
+      "method": "GET"
+    },
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/5TL142167U147110F",
+      "rel": "update",
+      "method": "PATCH"
+    },
+    {
+      "href": "https://api.sandbox.paypal.com/v2/checkout/orders/5TL142167U147110F/capture",
+      "rel": "capture",
+      "method": "POST"
+    }
+  ]
+}

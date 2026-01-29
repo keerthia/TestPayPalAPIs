@@ -1,0 +1,234 @@
+ID in Map: 0 | Json Response:  {
+  id: '0HG43334KY127230E',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0HG43334KY127230E',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=0HG43334KY127230E',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0HG43334KY127230E',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0HG43334KY127230E/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+ID in Map: 1 | Json Response:  {
+  id: '3TD78654LK531462S',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3TD78654LK531462S',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=3TD78654LK531462S',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3TD78654LK531462S',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3TD78654LK531462S/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+ID in Map: 2 | Json Response:  {
+  id: '23372265LV8899520',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/23372265LV8899520',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=23372265LV8899520',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/23372265LV8899520',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/23372265LV8899520/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+ID in Map: 4 | Json Response:  {
+  id: '62M108868E3654715',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/62M108868E3654715',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=62M108868E3654715',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/62M108868E3654715',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/62M108868E3654715/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+ID in Map: 5 | Json Response:  {
+  id: '0GU74538UW666593U',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0GU74538UW666593U',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=0GU74538UW666593U',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0GU74538UW666593U',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/0GU74538UW666593U/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+ID in Map: 6 | Json Response:  {
+  id: '1K620859D9159834F',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/1K620859D9159834F',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=1K620859D9159834F',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/1K620859D9159834F',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/1K620859D9159834F/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+ID in Map: 7 | Json Response:  {
+  id: '3D6249149E615672R',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3D6249149E615672R',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=3D6249149E615672R',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3D6249149E615672R',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/3D6249149E615672R/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+ID in Map: 8 | Json Response:  {
+  id: '6E145572VP0666803',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6E145572VP0666803',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=6E145572VP0666803',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6E145572VP0666803',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/6E145572VP0666803/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
+ID in Map: 9 | Json Response:  {
+  id: '9AG06169CS5633203',
+  status: 'CREATED',
+  links: [
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/9AG06169CS5633203',
+      rel: 'self',
+      method: 'GET'
+    },
+    {
+      href: 'https://www.sandbox.paypal.com/checkoutnow?token=9AG06169CS5633203',
+      rel: 'approve',
+      method: 'GET'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/9AG06169CS5633203',
+      rel: 'update',
+      method: 'PATCH'
+    },
+    {
+      href: 'https://api.sandbox.paypal.com/v2/checkout/orders/9AG06169CS5633203/capture',
+      rel: 'capture',
+      method: 'POST'
+    }
+  ]
+}
