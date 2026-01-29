@@ -9,7 +9,7 @@
     }
   ],
   "message": "The requested action could not be performed, semantically incorrect, or failed business validation.",
-  "debug_id": "f7371426dd20c",
+  "debug_id": "f25184570a8ea",
   "links": [
     {
       "href": "https://developer.paypal.com/api/rest/reference/orders/v2/errors/#CANNOT_BE_ZERO_OR_NEGATIVE",
